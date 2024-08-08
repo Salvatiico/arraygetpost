@@ -1,4 +1,18 @@
-<html>
+
+<?php
+    session_start();
+    $_SESSION['autenticado'];
+    echo($_SESSION['autenticado'])
+
+    if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM') {
+      header('Location: index.php?login=erro2');
+    }
+  
+?>
+
+
+
+<!DOCTYPE html>
   <head>
     <meta charset="utf-8" />
     <title>App Help Desk</title>
